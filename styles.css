@@ -1,0 +1,210 @@
+
+body{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin-top: 10px;
+	overflow-y: hidden;
+	border: 2px solid green;
+	padding-bottom: 20px;
+}
+#title{
+	position: relative;
+	font-family: trebuchet MS;
+	font-weight: bolder;
+	font-size: 70px;
+	text-align: center;
+	align-items: center;
+	animation-name: start;
+	animation-duration: 3s;
+}
+
+#container{
+	width: 100%;
+	margin: 0 auto;
+	justify-content: center;
+	text-align: center;
+	height: calc(50vh - 470px);
+	animation: fadein 6s forwards;
+}
+input{
+	width: calc(100% - 1% - 120px);
+	height: 50px;
+}
+#add-task{
+	border-radius: 5px;
+	width: 100px;
+	background: #6c757d;
+	border-color: #6c757d;
+	color: #fff;
+	font-weight: 400;
+}
+#add-task:hover{
+	background: #5c636a;;
+}
+#task-box{
+	overflow: clip;
+	width: 40%;
+	min-width: 600px;
+	min-height: 400px;
+	background: white;
+	border: 7px solid orange;
+	padding: 5px 2.5%;
+	border-radius: 20px;
+	margin: 0 auto;
+	text-align: left;
+}
+#task-box-nav{
+	display: flex;
+	justify-content: right;
+	height: 30px;
+	width: 100%;
+}
+#task-box label{
+	width: 120px;
+	font-weight: bolder;
+	font-size: 20px;
+	font-family: Tahoma;
+	text-align: left;
+}
+#addorupdatetask{
+	display: block;
+	margin: 0 auto;
+}
+button{
+	min-width: 120px;
+	height: 2.5rem;
+	border-radius: 10px;
+	border: 2px solid black;
+}
+hr{
+	margin: 0;
+	padding: 0;
+}
+
+.discard-window{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	opacity: 99%;
+	background: white;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+#dialog-box{
+
+	opacity: 100%;
+	position: relative;
+	width: 400px;
+	height: 200px;
+	background: white;
+	border: 3px solid red;
+
+}
+#dialog-box h1{
+	background: red;
+	font-size: 30px;
+	font-weight: 800;
+	text-decoration: underline;
+	color: white;
+}
+#discard-window p{
+	font-size: 20px;
+	font-weight: 500;
+	text-align: center;
+}
+#button-box{
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+}
+.tasks-box{
+	width: 100%;
+	height: calc(100vh - 230px);
+	margin-bottom: 300px;
+	padding: 10px;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	overflow-y: scroll;
+}
+.todo-box{
+	margin: 15px;
+	width: 350px;
+	min-width: 350px;
+	height: 200px;
+	min-height: 200px;
+	border: 5px solid orange;
+	border-radius: 20px;
+}
+.todo-box p{
+	text-align: left;
+	padding: 0 5px;
+}
+.todo-box div{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+@media (max-width: 1000px){
+	#title{
+		font-size: 70px;
+	}
+}
+@media (max-width: 800px){
+	#title{
+		font-size: 60px;
+	}
+}
+@media (max-width: 620px){
+	#title{
+		font-size: 50px;
+	}
+	#task-box, #dialog-box{
+		scale: 0.9;
+	}
+
+}
+@media (max-width: 375px){
+	#title{
+		font-size: 50px;
+	}
+	#task-box, #dialog-box{
+		scale: 0.7;
+	}
+	#tasks-box{
+		scale: 0.9
+	}
+}
+.hidden{
+	display: none;
+}
+@keyframes fadein{
+	0%{
+		opacity: 0%;
+	}
+	50%{
+		opacity: 0%;
+	}
+	100%{
+		opacity: 100%;
+	}
+}
+@keyframes start{
+	0%{
+		top: 40vh;
+		scale: 1.5;
+	}
+	50%{
+		scale: 1.8;
+		top: 40vh;
+	}
+	100%{
+		top: 0;
+		scale: 1;
+	}
+}
